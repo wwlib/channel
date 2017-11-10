@@ -1,0 +1,12 @@
+{
+  "name": "jibo_channel",
+  "displayName": "Jibo Channel",
+  "description": "",
+  "category": "Integrations",
+  "documentLink": "",
+  "needsOAuth": false,
+  "providerData": [],
+  "module": [],
+  "hasOAuth": false,
+  "isChannel": true
+}
