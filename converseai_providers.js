@@ -17,6 +17,12 @@ var onProviderRegister = function(app, body) {
   * @example
   * var regOne = body.payload.registrationData.regOne;
   */
+  var registrationData = body.payload.registrationData;
+  var inboundURI = body.payload.inboundURI;
+
+  if (inboundURI) {
+    registrationData.inbound_uri = inboundURI;
+  }
 
   /** @type {RegistrationDataResponse} response The Converse AI response to respond with. */
   var response = new RegistrationDataResponse();

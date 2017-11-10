@@ -75,7 +75,7 @@ var onMessageInbound = function(app, body) {
       "Content-Type": "application/json"
     },
     httpStatus: 200,
-    body: "ok",
+    body: "aok",
   });
 
   app.send(Status.SUCCESS, response);

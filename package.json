@@ -7,7 +7,7 @@
     "test": "mocha test/plugin-test.js 'test/**/*-test.js'"
   },
   "dependencies": {
-    "@converseai/plugins-sdk": "latest"
+    "@converseai/plugins-sdk": "converseai/converseai-plugins-sdk#channels"
   },
   "devDependencies": {
     "body-parser": "1.18.2",

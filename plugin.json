@@ -1,12 +1,33 @@
 {
   "name": "jibo_channel",
   "displayName": "Jibo Channel",
-  "description": "",
+  "description": "A channel for integrating with Jibo robots",
   "category": "Integrations",
   "documentLink": "",
   "needsOAuth": false,
-  "providerData": [],
+  "providerData": [
+    {
+      "param": "inbound_uri",
+      "displayName": "Inbound URI",
+      "description": "URI to send robot messages to",
+      "type": "STRING",
+      "optional": true,
+      "readOnly": true
+    }
+  ],
   "module": [],
   "hasOAuth": false,
-  "isChannel": true
+  "isChannel": true,
+  "uiSpec": {
+    "providerTabs": [
+      {
+        "text": "Settings",
+        "params": [
+          "inbound_uri"
+        ],
+        "type": "SETTINGS",
+        "default": "true"
+      }
+    ]
+  }
 }
