@@ -46,29 +46,30 @@ const OutboundResponse    = require('@converseai/plugins-sdk').Payloads.Channel.
 // const OutboundResponse    = require('@converseai/plugins-sdk').Payloads.Channel.Async.OutboundResponse;
 
 var onMessageInbound = function(app, body) {
- // /**
- //  * Registration parameters assigned to body.payload.registrationData.
- //  * @example
- //  * var regOne = body.payload.registrationData.regOne;
- //  */
- //
- //  /** @type {InboundResponse} response The Converse AI response to respond with. */
- //  var response = new InboundResponse();
- //
- //  /** @type {InboundOutput} output object to be added to the response. */
- //  var output = new InboundOutput();
- //
- //  response.addOutput(output);
- //
- //  /*
- //  * This will return a success status and response to the registration function.
- //  * It is important to always call `app.send` with a status and a response when
- //  * the method has finished computing and must always return the data to be
- //  * stored on the provider.
- //  */
- //  app.send(Status.SUCCESS, response);
+// /**
+//  * Registration parameters assigned to body.payload.registrationData.
+//  * @example
+//  * var regOne = body.payload.registrationData.regOne;
+//  */
+//
+//  /** @type {InboundResponse} response The Converse AI response to respond with. */
+//  var response = new InboundResponse();
+//
+//  /** @type {InboundOutput} output object to be added to the response. */
+//  var output = new InboundOutput();
+//
+//  response.addOutput(output);
+//
+//  /*
+//  * This will return a success status and response to the registration function.
+//  * It is important to always call `app.send` with a status and a response when
+//  * the method has finished computing and must always return the data to be
+//  * stored on the provider.
+//  */
+//  app.send(Status.SUCCESS, response);
 
   console.log("onMessageInbound: " + JSON.stringify(body.payload));
+
   var response = new OutboundResponse();
   response.setHTTPResponse({
     headers: {
@@ -77,8 +78,20 @@ var onMessageInbound = function(app, body) {
     httpStatus: 200,
     body: "aok",
   });
-
+  console.log("response: " + JSON.stringify(response));
   app.send(Status.SUCCESS, response);
+
+  // var output = new InboundOutput();
+  // var conversationMessage = new Message.Conversation();
+  //
+  // conversationMessage.setIntent("Pizza", true);
+  // // conversationMessage.setEntityData(inboundIntent.entities);
+  // output.setMessage(conversationMessage);
+  // console.log("conversationMessage: " + JSON.stringify(conversationMessage));
+  // var response = new InboundResponse();
+  // response.addOutput(output);
+  // console.log("response: " + JSON.stringify(response));
+  // app.send(Status.SUCCESS, response);
 }
 
 var onMessageOutbound = function(app, body) {

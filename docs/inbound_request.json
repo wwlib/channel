@@ -1,0 +1,31 @@
+
+"https://jibo19769.converse.ai/api/channel/jibo19769_jibo_channel/1A133CA1-3EB5-4F97-AF65-F2D3DB91BE26/8535299321c6e83b98822b820cfc36b0/inbound?utterance=order+pizza"
+
+{
+    "formData": null,
+    "inboundHeaders": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Connection": "keep-alive",
+        "Cookie": "ajs_anonymous_id=%225909b7ac-192d-4ef8-8612-76587ba0e648%22; messagesUtk=3d3cc0f18da82101808d317d00d0302f; __hstc=3180143.3d3cc0f18da82101808d317d00d0302f.1508287804887.1509502332519.1510162785413.7; hubspotutk=3d3cc0f18da82101808d317d00d0302f; intercom-session-ikr01f1g=akhBc3UxZ0NZVUdqK3BqVllnRVRqSTZyYzR6Zk1UMjk5aktZcXE0MzdTeHBad1htdHNXMVlNYk5aZ1EwaERDTi0tK05jWVovbloyMlF2cFlxN2tCSHRHQT09--d8e95a11daf8699341189b563cd21af13bd1116c; _ga=GA1.2.77808393.1508348784; _gid=GA1.2.1107695609.1510279331; ajs_user_id=null; ajs_group_id=null; intercom-id-zl2k8by9=d6555563-8ade-4d16-a604-478dc98aee13; mp_d0d0130d28c7c33b7507760833a75410_mixpanel=%7B%22distinct_id%22%3A%20%221A133CA1-3EB5-4F97-AF65-F2D3DB91BE26%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%2C%22spuuid%22%3A%20%221A133CA1-3EB5-4F97-AF65-F2D3DB91BE26%22%2C%22useruuid%22%3A%20%2245BC71A0-9B55-47BB-B386-5B73EDC0C9A9%22%2C%22useremail%22%3A%20%22andrew.rapo%40jibo.com%22%2C%22user_name%22%3A%20%22Andrew%20Rapo%22%2C%22hostname%22%3A%20%22jibo19769%22%7D; mp_mixpanel__c=0",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36",
+        "X-Forwarded-For": "76.24.108.221",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "method": "GET",
+    "queryParam": {
+        "utterance": {
+            "data": ["order pizza"]
+        }
+    },
+    "registrationData": {
+        "inbound_uri": "https://jibo19769.converse.ai/api/channel/jibo19769_jibo_channel/1A133CA1-3EB5-4F97-AF65-F2D3DB91BE26/8535299321c6e83b98822b820cfc36b0/inbound"
+    }
+}
+
+{"httpResponse":{"headers":{"Content-Type":"application/json"},"httpStatus":200,"body":"aok"}}
+
+{"channelOutput":[{"channelMessage":{"conversation":{"new":"Pizza"}},"channelSetting":{"sync":true}}]}
