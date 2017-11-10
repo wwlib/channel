@@ -26,6 +26,80 @@
     }
 }
 
+{
+    "formData": {
+        "utterance": {
+            "data": ["order pizza"]
+        }
+    },
+    "inboundHeaders": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Cache-Control": "no-cache",
+        "Connection": "keep-alive",
+        "Content-Length": "21",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+        "Postman-Token": "d42ecddf-276d-6b27-ca08-a234fdaca613",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36",
+        "X-Forwarded-For": "108.114.213.147",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "method": "POST",
+    "queryParam": null,
+    "registrationData": {
+        "inbound_uri": "https://jibo19769.converse.ai/api/channel/jibo19769_jibo_channel/1A133CA1-3EB5-4F97-AF65-F2D3DB91BE26/8535299321c6e83b98822b820cfc36b0/inbound"
+    }
+}
+
 {"httpResponse":{"headers":{"Content-Type":"application/json"},"httpStatus":200,"body":"aok"}}
 
-{"channelOutput":[{"channelMessage":{"conversation":{"new":"Pizza"}},"channelSetting":{"sync":true}}]}
+{
+    "channelMessage": {
+        "text": "What kind of pizza do you want?",
+        "media": null,
+        "Conversation": null
+    },
+    "channelSetting": {
+        "userId": "ROBOT_ID_1234",
+        "threadId": "jibo",
+        "userUUID": "E4A601E7-271C-4BCA-A7EF-24AACCF6D35A",
+        "requestUUID": "073A1DDD-1789-4320-A3DD-C15275F00692",
+        "data": {},
+        "channelName": "jibo19769_jibo_channel",
+        "userInfo": {}
+    },
+    "conversation": "17189FA5-3E93-408D-9CD6-787643392CCB",
+    "msgContext": "INPUT_REQUEST",
+    "processSync": true,
+    "registrationData": {
+        "inbound_uri": "https://jibo19769.converse.ai/api/channel/jibo19769_jibo_channel/1A133CA1-3EB5-4F97-AF65-F2D3DB91BE26/8535299321c6e83b98822b820cfc36b0/inbound"
+    }
+}
+
+"https://jibo19769.converse.ai/api/channel/jibo19769_jibo_channel/1A133CA1-3EB5-4F97-AF65-F2D3DB91BE26/8535299321c6e83b98822b820cfc36b0/inbound?utterance=pepperoni"
+
+{
+    "channelMessage": {
+        "text": "Great. You said pepperoni",
+        "media": null,
+        "Conversation": null
+    },
+    "channelSetting": {
+        "userId": "ROBOT_ID_1234",
+        "threadId": "jibo",
+        "userUUID": "E4A601E7-271C-4BCA-A7EF-24AACCF6D35A",
+        "requestUUID": "073A1DDD-1789-4320-A3DD-C15275F00692",
+        "data": {},
+        "channelName": "jibo19769_jibo_channel",
+        "userInfo": {}
+    },
+    "conversation": "17189FA5-3E93-408D-9CD6-787643392CCB",
+    "msgContext": "END",
+    "processSync": true,
+    "registrationData": {
+        "inbound_uri": "https://jibo19769.converse.ai/api/channel/jibo19769_jibo_channel/1A133CA1-3EB5-4F97-AF65-F2D3DB91BE26/8535299321c6e83b98822b820cfc36b0/inbound"
+    }
+}

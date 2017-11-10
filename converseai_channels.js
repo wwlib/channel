@@ -70,28 +70,64 @@ var onMessageInbound = function(app, body) {
 
   console.log("onMessageInbound: " + JSON.stringify(body.payload));
 
-  var response = new OutboundResponse();
-  response.setHTTPResponse({
-    headers: {
-      "Content-Type": "application/json"
-    },
-    httpStatus: 200,
-    body: "aok",
-  });
-  console.log("response: " + JSON.stringify(response));
-  app.send(Status.SUCCESS, response);
+  // "formData": {
+  //     "utterance": {
+  //         "data": ["order pizza"]
+  //     }
+  // }
 
-  // var output = new InboundOutput();
-  // var conversationMessage = new Message.Conversation();
-  //
-  // conversationMessage.setIntent("Pizza", true);
-  // // conversationMessage.setEntityData(inboundIntent.entities);
-  // output.setMessage(conversationMessage);
-  // console.log("conversationMessage: " + JSON.stringify(conversationMessage));
-  // var response = new InboundResponse();
-  // response.addOutput(output);
+  let utterance = '';
+  let utteranceData;
+
+  if (body.payload.formData) {
+    let formData = body.payload.formData;
+    utteranceData = formData.utterance ? formData.utterance.data : null;
+    utterance = utteranceData ? utteranceData[0] : '';
+  } else if (body.payload.bodyData) {
+    let bodyData = body.payload.bodyData;
+    utterance = bodyData.utterance;
+  }
+
+
+  console.log("utterance: " + utterance);
+
+  // var response = new OutboundResponse();
+  // response.setHTTPResponse({
+  //   headers: {
+  //     "Content-Type": "application/json"
+  //   },
+  //   httpStatus: 200,
+  //   body: "aok",
+  // });
   // console.log("response: " + JSON.stringify(response));
   // app.send(Status.SUCCESS, response);
+
+  var output = new InboundOutput();
+  // var conversationMessage = new Message.Conversation();
+
+  output.setUserId('ROBOT_ID_1234');
+  output.setThreadId('jibo');
+  output.setSync(true);
+  // User info is not needed, do not worry if you do not have it
+  // output.setUserInfo({
+	// 	email: '<email address >'
+  //   firstName: 'FirstName'
+  //   phoneNumber: '555-123-4567'
+	// });
+
+  var textMessage = new Message.Text();
+  textMessage.setText(utterance);
+  output.setMessage(textMessage);
+
+  // conversationMessage.setIntent("Pizza", true);
+  // conversationMessage.setEntityData(inboundIntent.entities);
+  // output.setMessage(conversationMessage);
+  // console.log("conversationMessage: " + JSON.stringify(conversationMessage));
+
+  var response = new InboundResponse();
+  response.addOutput(output);
+  console.log("response: " + JSON.stringify(response));
+  app.send(Status.SUCCESS, response);
 }
 
 var onMessageOutbound = function(app, body) {
